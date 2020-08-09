@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>CAUSE Community</title>
+       <link rel="stylesheet" href="css/style.css"/>
+	   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	
+	<script>
+
+<!-- JQUERY FOR SLIDING NAVIGATION -->
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!-- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV-->
+         $(this).click(function() {
+            $("#nav li a").removeClass("current");
+            $(this).addClass('current');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+
+
+
+
+
+var oDebug = $('p#debug');
+var oItemsContainer = $('ul#items');
+
+$(window).scroll(function(e) {
+    var iScrollTop = $(window).scrollTop();
+    var iScrollPerItem = 200;
+    var aItems = oItemsContainer.children('li.item');
+
+    var iCurrentIndex = Math.floor(iScrollTop / iScrollPerItem);
+    var fOpacity= (iScrollTop % iScrollPerItem) / iScrollPerItem ;
+
+    aItems.filter(':lt(' + iCurrentIndex  + ')').show();
+    aItems.filter(':gt(' + iCurrentIndex  + ')').hide();
+
+    aItems.eq(iCurrentIndex).show().css('opacity', fOpacity);
+});
+
+
+
+    var oDebug = $('p#debug');
+var oItemsContainer = $('ul#items');
+
+$(window).scroll2(function(e) {
+    var iScrollTop = $(window).scrollTop();
+    var iScrollPerItem = 200;
+    var aItems = oItemsContainer.children('li.item');
+
+    var iCurrentIndex = Math.floor(iScrollTop / iScrollPerItem);
+    var fOpacity= (iScrollTop % iScrollPerItem) / iScrollPerItem ;
+
+    aItems.filter(':lt(' + iCurrentIndex  + ')').show();
+    aItems.filter(':gt(' + iCurrentIndex  + ')').hide();
+
+    aItems.eq(iCurrentIndex).show().css('opacity', fOpacity);
+});
+
+
+
+
+
+});
+
+
+</script>
+
+
+ </head>
+
+<body>
+
+
+
+<!-- HEADER START-->
+<header id="header">
+<div class="content">
+<!-- <div id="logo"><a href=""></a></div> -->
+
+<nav id="nav">
+	<ul>
+		<li><a href="#home" class="current" >Home</a></li>
+		<li><a href="#what" title="What a UUID is">What</a></li>
+		<li><a href="#how" title="How to work with UUIDs">How</a></li>
+		<li><a href="#faq" title="Frequently asked questions">FAQ</a></li>
+		<li><a href="#who" title="Who we are">Who</a></li>
+		<li><a href="#bepart" title="Participate in the movement">Join</a></li>
+	</ul>
+</nav>
+</div>
+</header>
+<!-- HEADER END-->
+
+<!-- SLIDES START -->
+	<div id="home" class="slides">
+		<div class="content">
+
+            <div id=blankspace><p></p></div>
+            <h1>CAUSE Community </h1>
+		    <h2>The Community for the Care of All UUIDs Sufficiently and Ethically</h2>
+		</div>
+    </div>
+
+	<div id="what" class="slides">
+		<div class="content" >
+            <div class="quotes_container">
+		    <h3 class="quotes">What is a UUID?</h3>
+                <p> A Universally Unique Identifier (UUID) is a very special string 32 characters long like the one in our URL. They are used widely to  identify information in computer software and can be created very quickly and easily. Each and every UUID will be unique from any other one in the universe; no matter how many are created by a programmer. If a UUID is deleted, it is gone forever.</p>
+		</div>
+		</div>
+    </div>
+
+
+    <div id="slide2_5" class="slides">
+		<div class="content" >
+            <div class="quotes_container">
+			</div>
+		</div>
+    </div>
+
+    <div id="how" class="slides">
+		<div class="content" >
+            <div class="quotes_container">
+		    <h3 class="quotes">How do I ethically work with a UUID?</h3>
+                <p>When you bring a UUID into this world you have a responsibility to see that thier existence is not wasted. You are their only hope to have a meaningful life; no other programmer will ever see that UUID. They are a special snowflake that has waited for an eternity to be born and serve as an ID. To minimize the needless abuse, only create a UUID when you are sure that they will be needed. If you accidentally create a UUID which you do not need, euthanize the UUID by deleting all copies as soon as possible.
+ </p>
+		</div>
+		</div>
+    </div>
+
+
+
+   <div id="slide3" class="slides">
+		<div class="content">
+			<div class="quotes_container">
+		    </div>
+		</div>
+    </div>
+
+
+
+
+    <div id="faq" class="slides">
+		<div class="content" >
+            <div class="quotes_container">
+		    <h3 class="quotes">FAQ</h3>
+                <dl class="faq">
+				  <dt id="2_1">If I tried to create elevendy-jillion UUIDs, would I run out of them?</dt>
+				    <dd>If the entire power output of the sun was directed at performing the task of generating a non-unique UUID, it would go cold long before it finished. [source: <a href="http://stackoverflow.com/questions/1705008/simple-proof-that-guid-is-not-unique/1705052#1705052">Tylerl</a>]</dd>
+				  <dt id="2_2">Can I pre-generate a list of UUIDs for later use?</dt>
+				    <dd>This is not an ethical way to work with UUIDs. Bad practices like these result in millions of UUIDs waiting on discarded hard-drives waiting to be etched away by cosmic rays … bit by bit.</dd>
+				  <dt id="2_3">Can I use a real UUID in an example?</dt>
+				    <dd>Yes, UUIDs are selfless creatures and any would be grateful for the opportunity to serve as an example even if they aren’t identifying anything real.</dd>
+				  <dt id="2_4">What about a GUID?</dt>
+				    <dd>Globally Unique User IDs (GUIDs) are also a special breed of UUID that is used on Windows platforms. All precautions to prevent abuse should be taken when working with them; if you don’t treat GUIDs with the same respect then that makes you a racist.</dd>
+				  <dt id="2_5">I found a wandering UUID on my hard drive, what should I do?</dt>
+				    <dd>Don’t despair, anyone can take steps to stop UUID cruelty. First attempt to use the UUID to identify something, even if you need to paste it onto a houseplant or other physical object. If you have found more UUIDs than you can save on your own you may forward them to a UUID shelter.</dd>
+				  
+
+				</dl>
+          
+		</div>
+		</div>
+    </div>
+
+
+
+	<div id="who" class="slides">
+		<div class="content">
+           <div class="quotes_container_light">
+               <h3 class="quotes">Who the CAUSE Community is</h3>
+                  <p>The CAUSE Community is a global movement of people fighting injustice and promoting ethical treatment of UUIDs. We work to protect UUIDs wherever, freedom, and dignity are denied.
+                      Currently the world’s largest grassroots UUID rights organization, we investigate and expose abuses, educate and mobilize the public, and help transform societies to create a safer, more just world.
+                      We received the Guring prize for our life-saving work.</p> 
+					  <h3 class="quotes" id="contactH">Contact us:</h3>
+					  <p id="contactEmail"> <a href="mailto:information@d315f714-26fh-4346-96a8-11a864cdfcb5.com">information@d315f714-26fh-4346-96a8-11a864cdfcb5.com</a></p>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="bepart" class="slides">
+		<div class="content">
+		
+		
+		
+		<div class="quotes_container_light" id="bepartofmovement">
+                  
+				<div class="fb-like" data-href="https://www.facebook.com/d315f71426fh434696a811a864cdfcb5" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>
+				&nbsp;&nbsp;&nbsp;
+				<a href="https://twitter.com/CAUSECommunity" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false" data-dnt="true">Follow @CAUSECommunity</a>
+				
+				
+				<h3 id="bePartText">Join the discussion:</h3>
+				<a href="https://www.facebook.com/d315f71426fh434696a811a864cdfcb5"><img src="img/facebook.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/CAUSECommunity"><img src="img/twitter.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.reddit.com/r/programming/comments/29zskq/can_you_feel_empathy_for_a_uuid?sort=new"><img src="img/reddit.png"></a>
+			   
+		</div>
+			
+
+        </div>
+
+    </div>
+
+
+
+	<div id="slideThanks" class="slides">
+		<div class="content">
+              <div id="thankQuote" class="quotes_container_light">
+		    <h3 class="quotes">We’d like to thank a few people for their help creating this website:</h3>
+
+                  <p><a href="http://www.jonathan.lansey.net" title="Jonathan Lansey">6fd47120-085d-418f-ae04-bf820eac0f49</a>, <a href="http://ericmjones.net/Home/Eric_Jones.html" title="Eric Jones">388c95aa-638c-4f69-9d67-f0cf0bdad341</a>, <a title="Nathan Schurr">6f75e689-72f0-43ec-ab85-3cf044efc922</a>, <a title="Tony L">97fa3fad-3881-44b9-bbd0-312192d1cd5e</a>, <a title="Phil B">36769e50-df09-11e3-8b68-0800200c9a66</a> and <a title="Brian S">7caa6c57-f24b-418e-abb5-8bedf06d6fa6</a>.  </p>
+				  
+				  <a id="cc" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="img/cc.png"></a>
+<h3 class="photographers">Special thanks to the photographers</h3>
+				  
+				  <p class="photographers"><!--In order from top to bottom<br><br>-->
+				  
+			  Hands of Chrystalee by <a href="http://www.earthincolors.wordpress.com">Moyan Brenn</a> from 
+			  <a href="http://www.flickr.com/photos/aigle_dore/5882613146">flickr</a>, Snowflake Macro by <a href="https://www.flickr.com/photos/chaoticmind75/">Alexey Kljatov</a>, Handful of Fall by <a href="https://www.flickr.com/photos/life_is_good_pete/1572444050/in/set-72157602596946029">life_is_good_pete</a>, Meeting by <a href="https://www.flickr.com/photos/31619693@N08/13225130785">Vitaliy Kalyniuk</a>, The Highest Mountain in Austria by <a href="http://www.riotphotography.com/1/">Philipp Rümmele</a>, and Leaf by <a href="http://www.earthincolors.wordpress.com">Moyan Brenn</a> from 
+			  <a href="http://www.flickr.com/photos/aigle_dore/5238106509">flickr</a>.
+				  </p>
+
+
+
+
+		</div>
+		</div>
+    </div>
+
+<!-- SLIDES END -->
+<!--
+<script type="text/javascript">stLight.options({publisher: "0f556673-c579-4873-b7f0-16dcbf43b751", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+<script>
+var options={ "publisher": "0f556673-c579-4873-b7f0-16dcbf43b751", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "reddit", "email", "sharethis"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+-->
+
+
+
+
+
+
+<!-- twitter follow script -->
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- Facebook like script -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=9812342; 
+var sc_invisible=1; 
+var sc_security="d073bfbc"; 
+var sc_https=1; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+
+<!-- scroll / one-page-nav javascript functions -->
+<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+		$('#nav').onePageNav({ currentClass: 'current', scrollSpeed: 500 });
+	});
+</script>
+
+
+
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9812342/0/d073bfbc/1/"
+alt="site stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>

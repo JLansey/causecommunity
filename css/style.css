@@ -1,0 +1,327 @@
+
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+h1,h2{
+    font-family:"Arvo";
+	font-weight:normal;
+	color:#fff8de;
+	background-color: rgba(0,0,0,0.3);
+	padding:10px 5px;
+	text-align: center;
+	margin:0;
+}
+h1 {
+	font-size: 55px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h3 {
+	font-weight: normal;
+	font-size: 16px;
+	text-align: center;
+	margin: 5px 0;
+	padding: 0;
+	position: relative;
+}
+
+p,li,dl{
+	font-family: Arvo;
+	font-size: 17px;
+}
+
+.center { margin: 0 auto; }
+.content{ margin: 0 auto; width: 960px; }
+.clear { clear: both; }
+
+
+/*= HEADER & NAVIGATION
+--------------------------------------------------------*/
+
+#header {
+	width: 100%;
+	background: url('../img/header-bg.png');
+	height: 80px;
+	position: fixed;
+	margin-top: 30px;
+	z-index:3;
+}
+
+#nav { width: 410px; margin:0 auto; margin-top: 20px; }
+
+#nav ul{
+	list-style: none;
+	display: block;
+	margin: 0 auto;
+	list-style: none;
+}
+
+#nav li{
+	margin-top: 9px;
+	float: left;
+	padding-left: 21px;
+}
+
+#nav li a { color: #fffcf2; opacity:0.6; font-size: 16px; text-decoration: none; font-family: 'Wellfleet';}
+#nav li a.current { color: #fffcf2; opacity:1; border-bottom: 2px solid #fffcf2;}
+#nav li a:hover { color: #fffcf2; opacity:1;}
+
+/*= QUOTES AND SOME ELEMENTS
+--------------------------------------------------------*/
+.quotes {
+ font-family: 'Goudy Bookletter 1911', serif;
+   font-weight: normal;
+   font-size: 30px;
+  text-align: left;
+  margin: 50px auto;
+}
+
+.quotes_container { width: 800px; margin: 0 auto; }
+.quotes_container a:link{ text-decoration:none; color:#000000;}
+.quotes_container a:current{ text-decoration:none; color:#000000;}
+.quotes_container a:hover{ text-decoration:underline; color:#000000;}
+
+.quotes_container_light{ width: 800px; margin: 0 auto; color: #fffcf2;}
+
+.quotes_container_light a{font-family:"Lucida Console",sans-serif;font-size:19;}
+.quotes_container_light a:link{ text-decoration:none; color:#fffcf2;}
+.quotes_container_light a:current{ text-decoration:none; color:#fffcf2;}
+.quotes_container_light a:hover{ text-decoration:underline;}
+.quotes_container_light a:visited{ text-decoration:underline; color:#D8D4C9;}
+ 
+#divider { background: url('../img/divider.png')no-repeat; width: 300px; height: 35px; margin: 0px auto 27px auto; }
+#ribbon { background: url('../img/ribbon.png')no-repeat; width: 251px; height: 48px; margin: 0 auto;  display: block; position: relative; top: -38px; }
+#blankspace {height:257px;}
+/*
+#contactEmail{
+	color:#000;
+	margin: 5px auto;
+}
+*/
+#contactH{
+	margin:0;
+}
+/*= BUTTONS
+--------------------------------------------------------*/
+
+button.btn-know {
+	padding: 15px 47px;
+	margin: 40px 38.8%;
+	text-align: center;
+	border: 4px solid #fff;
+	color: #fff;
+	background: transparent;
+	font-size: 19px;
+	cursor: pointer;
+	text-shadow: -1px 2px 0px rgba(90, 90, 90, 0.56);
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.btn-know:hover { background: #fff; color: transparent; }
+ul.built { list-style: none; margin: 0 auto; width: 730px; }
+.built li img{ float: left; padding-right: 34px; }
+
+
+
+/*= SLIDES STYLING
+--------------------------------------------------------*/
+
+.slides{
+	height: 300px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 200px 0;
+	width: 100%;
+	background-size: cover;
+	z-index:2;
+	
+	
+/*	background-color:#fff8de;*/
+	background-color:#fffcf2;
+}
+
+
+#home{
+	position: relative;
+	background:url('../img/slide1.jpg') 50% 0 no-repeat;
+	height: 518px;
+	padding: 200px 0 260px 0;
+	background-size: cover;
+	background-position: center;
+}
+
+#what{ /*what is a guid */
+	position: relative;
+	overflow: hidden;
+	padding: 200px 0;
+}
+#how{ /*how do you treat a guid */
+	position: relative;
+}
+
+#slide2_5{ /* leaf image */
+	position: relative;
+	background: url(../img/slide2_5.jpg) 50% 0 no-repeat fixed;
+	height: 600px;
+	padding: 170px 0 0 0;
+	background-size: cover;
+}
+
+#slide3{
+	position: relative;
+	background: url(../img/slide3.jpg) 50% 0 no-repeat fixed;
+	color: #fff;
+	height: 600px;
+	padding: 170px 0 0 0;
+	background-size: cover;
+	background-position:center;
+}
+
+#slide4{
+	position: relative;
+	background-color: #fff;
+}
+
+#who{
+	position: relative;
+	background: url(../img/slide5.jpg) 50% 0 no-repeat fixed;
+	height: 400px;
+	background-size: cover;
+}
+
+#bepart{
+	background: url(../img/slide5_5.jpg) 50% 0 no-repeat fixed;
+	height: 600px;
+	background-size: cover;
+	background-position:50% 70%;
+	z-index:0;
+
+}
+
+
+#bepartofmovement{ /* container */
+	position:fixed;
+	top:50%;
+	font-family: 'Goudy Bookletter 1911', serif;
+	font-weight: normal;
+	margin: 10px auto;
+	padding:10px 15px;
+	z-index: 0;
+}
+#bePartText{
+	 font-family: 'Goudy Bookletter 1911', serif;
+   font-weight: normal;
+   font-size: 40px;
+  text-align: left;
+  margin: 10px auto;
+}
+
+#faq{
+	position: relative;
+	color: #333333;
+	height: 800px;
+	padding: 200px 0;
+}
+
+
+
+#slideThanks{
+	position: relative;
+	background: url(../img/thanks.jpg) 50% 0 no-repeat ;
+	height: 600px;
+	background-size: cover;
+	color: #fff;
+}
+
+#thankQuote{
+	color:#fffcf2;
+	background-color: rgba(0,0,0,0.5);
+	padding:1px 15px;
+}
+
+#slideThanks.h3{
+  color: #000000;
+}
+
+#e1dc28d2-bbd5-4cdb-96e6-3c8510baba84{
+	position:relative;
+	background: url(../img/im404.jpg) 50% 0 no-repeat;
+	height: 1070px;
+
+}
+#e1dc28d2-bbd5-4cdb-96e6-3c8510baba84_cont{
+	margin:0 auto;
+	margin-top:220px;
+}
+
+
+
+#cc{
+	float:right;
+}
+.photographers a{font-family:inherit;}
+.photographers a:link{ color:#fffcf2;}
+.photographers a:visited{ color:#D8D4C9;}
+.photographers a:hover{ color:#fffcf2;}
+
+
+h3.photographers{
+	font-family: 'Goudy Bookletter 1911', serif;
+	font-weight: normal;
+	font-size: 30px;
+	text-align: left;
+	margin: 5px 0;
+	padding: 0;
+	position: relative;
+}
+
+/*= FAQ list -------------------------   text-decoration:underline;  */
+
+ul.section_menu{
+	background:#EDEDED;
+	padding:20px 10px;
+}
+
+
+dl.faq{
+	margin-bottom:30px;
+}
+
+	dl.faq dt{
+		font-weight:bold;
+		color:#000000;
+		padding:25px 0 5px 0;
+		display:block;
+	}
+
+	dl.faq dd{
+		padding-bottom:25px;
+		border-bottom:1px solid #cccccc;
+		display:block;
+	}
+
+	#twit{
+	
+	padding-bottom:10px;
+	
+	}
+
+/*= attempt at animated fade when Scrolling
+--------------------------------------------------------*/
+
+
+ul#items { width:200px; height:200px;  position:relative;  top:100px; left:10px; } /*position:fixed;*/
+ul#items li.item {background-color:#5A6351; display:block; height:100%; left:0; opacity:0; position:absolute; right:0; width:100%;}
+
+p#debug {position:fixed; right:10px; text-align:right; top:10px; }
+
+
+
+
