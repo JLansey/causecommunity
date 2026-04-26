@@ -322,6 +322,125 @@ ul#items li.item {background-color:#5A6351; display:block; height:100%; left:0; 
 
 p#debug {position:fixed; right:10px; text-align:right; top:10px; }
 
+/*= MOBILE OPTIMIZATIONS
+--------------------------------------------------------*/
+@media (max-width: 768px) {
+    /* Container replacements */
+    .content,
+    .quotes_container,
+    .quotes_container_light,
+    ul.built {
+        width: 90% !important;
+        max-width: none !important;
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+    
+    #nav {
+        width: 100% !important;
+        max-width: none !important;
+        margin-top: 5px;
+    }
 
+    #nav ul {
+        padding: 0;
+        text-align: center;
+    }
 
+    #nav li {
+        float: none;
+        display: inline-block;
+        padding: 5px 10px;
+        margin-top: 5px;
+    }
+    
+    #header {
+        height: auto;
+        padding-bottom: 10px;
+        position: absolute;
+        margin-top: 0;
+    }
+    
+    /* Typography adjustments for smaller screens */
+    h1 { font-size: 32px; padding: 10px; }
+    h2 { font-size: 20px; padding: 10px; }
+    h3, .quotes { font-size: 22px; margin: 15px auto; }
+    p, li, dl, dl.faq dd, dl.faq dt { font-size: 16px; line-height: 1.4; }
+    #bePartText { font-size: 22px; text-align: center; }
 
+    /* Layout adjustments */
+    .slides {
+        height: auto !important;
+        min-height: 400px;
+        padding: 80px 0 !important;
+        overflow: visible;
+    }
+
+    #home {
+        height: auto !important;
+        min-height: 500px;
+        padding: 120px 0 80px 0 !important;
+    }
+    
+    #faq {
+        height: auto !important;
+        min-height: auto;
+    }
+
+    #what, #how, #who, #slideThanks, #e1dc28d2-bbd5-4cdb-96e6-3c8510baba84 {
+        height: auto !important;
+        min-height: auto;
+        padding: 60px 0 !important;
+    }
+    
+    #bepart {
+        height: auto !important;
+        min-height: 500px;
+        padding: 60px 0 !important;
+        background-position: 75% center !important;
+        background-attachment: scroll !important;
+    }
+
+    #slide3, #slide2_5 {
+        height: 400px !important;
+        min-height: auto;
+        padding: 0 !important;
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+    
+    #bepartofmovement {
+        position: static;
+        margin: 20px auto;
+        transform: none;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    button.btn-know {
+        margin: 20px auto;
+        display: block;
+        width: 80%;
+    }
+    
+    /* FAQ list on mobile */
+    dl.faq dt { padding: 15px 0 5px 0; }
+    dl.faq dd { padding-bottom: 15px; }
+
+    img { max-width: 100%; height: auto; }
+    
+    #ribbon {
+        top: -10px;
+    }
+    
+    .fb-like, .twitter-follow-button {
+        margin: 10px auto;
+        display: block;
+    }
+    
+    #thankQuote {
+        padding: 15px;
+    }
+}
