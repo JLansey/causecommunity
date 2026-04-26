@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a6741"/>
+      <stop offset="100%" style="stop-color:#2d4a2d"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#bg)"/>
+  <path d="M32 52 C32 52 12 38 12 25 C12 18 17 14 23 14 C27 14 30 16 32 19 C34 16 37 14 41 14 C47 14 52 18 52 25 C52 38 32 52 32 52Z" fill="#c0392b" opacity="0.9"/>
+  <text x="32" y="38" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#fff8de" letter-spacing="0.5">UUID</text>
+</svg>
